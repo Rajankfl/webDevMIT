@@ -136,6 +136,49 @@
           </p>
         </article>
       </section>
+
+      <section id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact Me</h2>
+        <p>
+          Have a question or an opportunity? Send me a message using the form
+          below.
+        </p>
+        <form action="#" method="post">
+          <p>
+            <label for="name">Name</label><br />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              autocomplete="name"
+              required
+            />
+          </p>
+          <p>
+            <label for="email">Email</label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+            />
+          </p>
+          <p>
+            <label for="message">Message</label><br />
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              cols="40"
+              required
+            ></textarea>
+          </p>
+          <p>
+            <button type="submit">Send Message</button>
+          </p>
+        </form>
+      </section>
     </main>
   </body>
 </html>
