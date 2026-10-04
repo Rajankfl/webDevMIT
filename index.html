@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Personal portfolio of Rajan Kafle, a computer science student and web developer."
-    />
-    <meta name="author" content="Rajan Kafle" />
-    <title>Rajan Kafle | Personal Portfolio</title>
-  </head>
-  <body>
-    <header>
-      <h1>Rajan Kafle</h1>
-      <p>Computer Science Student and Web Developer</p>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal portfolio of Rajan Kafle, a computer science student and web developer.">
+  <meta name="author" content="Rajan Kafle">
+  <title>Rajan Kafle | Personal Portfolio</title>
+
+  <!-- Inter font from Google Fonts (system fonts are used as a fallback) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
+
+  <!-- All page styles live in this external stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Lets keyboard users jump past the navigation -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===== Site header and primary navigation ===== -->
+  <header id="top" class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <h1>Rajan Kafle</h1>
+        <p class="tagline">Computer Science Student and Web Developer</p>
+      </div>
       <nav aria-label="Primary">
         <ul>
           <li><a href="#about">About</a></li>
@@ -22,167 +35,145 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section id="about" aria-labelledby="about-heading">
-        <h2 id="about-heading">About Me</h2>
-        <figure>
-          <img
-            src="images/rajan.jpg"
-            alt="Portrait photo of Rajan Kafle"
-            width="200"
-            height="200"
-          />
-          <figcaption>Rajan Kafle, Computer Science student</figcaption>
-        </figure>
+  <main id="main">
+
+    <!-- ===== About ===== -->
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Me</h2>
+      <figure>
+        <img src="images/rajan.jpg" alt="Portrait photo of Rajan Kafle" width="200" height="200">
+        <figcaption>Rajan Kafle, BSc Computer Science student</figcaption>
+      </figure>
+      <div class="about-text">
         <p>
-          Hello! I am Rajan Kafle, an undergraduate student studying Computer
-          Science at Model Institute of Technology. I enjoy building web
-          applications, from simple static pages to full-stack projects with
-          real-time features.
+          Hello! I am Rajan Kafle, an undergraduate student studying Computer Science at
+          Northbridge University of Technology. I enjoy building web applications, from simple
+          static pages to full-stack projects with real-time features.
         </p>
         <p>
-          My interests include front-end development, JavaScript frameworks such
-          as React and Next.js, and writing accessible, standards-compliant
-          code. Outside of coursework, I learn by building small projects and
-          publishing them on GitHub.
+          My interests include front-end development, JavaScript frameworks such as React and
+          Next.js, and writing accessible, standards-compliant code. Outside of coursework, I
+          learn by building small projects and publishing them on GitHub.
         </p>
-      </section>
+      </div>
+    </section>
 
-      <section id="skills" aria-labelledby="skills-heading">
-        <h2 id="skills-heading">Technical Skills</h2>
-        <dl>
+    <!-- ===== Skills (description list shown as a card grid) ===== -->
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Technical Skills</h2>
+      <dl class="skills-grid">
+        <div class="skill">
           <dt>HTML5</dt>
-          <dd>
-            Semantic markup, accessible forms, and W3C-valid document structure.
-          </dd>
-
+          <dd>Semantic markup, accessible forms, and W3C-valid document structure.</dd>
+        </div>
+        <div class="skill">
           <dt>CSS3</dt>
-          <dd>Responsive layouts using Flexbox and Grid.</dd>
-
+          <dd>Responsive layouts using Flexbox, Grid, and media queries.</dd>
+        </div>
+        <div class="skill">
           <dt>JavaScript (ES6+)</dt>
-          <dd>
-            DOM manipulation, asynchronous programming, and working with REST
-            APIs.
-          </dd>
-
+          <dd>DOM manipulation, asynchronous programming, and working with REST APIs.</dd>
+        </div>
+        <div class="skill">
           <dt>React and Next.js</dt>
-          <dd>
-            Component-based user interfaces, routing, and server-side rendering.
-          </dd>
-
+          <dd>Component-based user interfaces, routing, and server-side rendering.</dd>
+        </div>
+        <div class="skill">
           <dt>Node.js and Express</dt>
-          <dd>
-            Building back-end APIs and real-time communication with Socket.IO.
-          </dd>
-
+          <dd>Building back-end APIs and real-time communication with Socket.IO.</dd>
+        </div>
+        <div class="skill">
           <dt>Git and GitHub</dt>
-          <dd>
-            Version control, branching, and publishing projects to public
-            repositories.
-          </dd>
-        </dl>
-      </section>
+          <dd>Version control, branching, and publishing projects to public repositories.</dd>
+        </div>
+      </dl>
+    </section>
 
-      <section id="projects" aria-labelledby="projects-heading">
-        <h2 id="projects-heading">Projects</h2>
+    <!-- ===== Projects ===== -->
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+      <div class="project-grid">
 
-        <article aria-labelledby="project-chat">
+        <article class="project-card" aria-labelledby="project-chat">
           <h3 id="project-chat">Real-Time Chat Application</h3>
           <p>
-            A real-time chat application built with the MERN stack (MongoDB,
-            Express, React, and Node.js). Messages are delivered instantly using
-            Socket.IO, and users are given generated avatars from DiceBear.
+            A real-time chat application built with the MERN stack (MongoDB, Express, React,
+            and Node.js). Messages are delivered instantly using Socket.IO, and users are given
+            generated avatars from DiceBear.
           </p>
-          <p>
-            <strong>Technologies:</strong> MongoDB, Express, React, Node.js,
-            Socket.IO
-          </p>
-          <p>
-            <a href="https://github.com/Rajankfl/Chat-App"
-              >View the Chat App repository on GitHub</a
-            >
-          </p>
+          <ul class="tags" aria-label="Technologies used">
+            <li>MongoDB</li>
+            <li>Express</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>Socket.IO</li>
+          </ul>
+          <p><a class="button" href="https://github.com/Rajankfl/Chat-App">View repository</a></p>
         </article>
 
-        <article aria-labelledby="project-movies">
+        <article class="project-card" aria-labelledby="project-movies">
           <h3 id="project-movies">Movies App</h3>
           <p>
-            A single-page web application built with React for browsing movies.
-            The project was used to practise React components, state management,
-            and fetching data from an external API.
+            A single-page web application built with React for browsing movies. The project
+            was used to practise React components, state management, and fetching data
+            from an external API.
           </p>
-          <p><strong>Technologies:</strong> React, JavaScript</p>
-          <p>
-            <a href="https://github.com/Rajankfl/Movies-App"
-              >View the Movies App repository on GitHub</a
-            >
-          </p>
+          <ul class="tags" aria-label="Technologies used">
+            <li>React</li>
+            <li>JavaScript</li>
+          </ul>
+          <p><a class="button" href="https://github.com/Rajankfl/Movies-App">View repository</a></p>
         </article>
 
-        <article aria-labelledby="project-files">
+        <article class="project-card" aria-labelledby="project-files">
           <h3 id="project-files">File Sharing Application</h3>
           <p>
-            A file sharing web application built with Next.js and TypeScript
-            using the App Router. Users can upload files and share them with
-            others through a link.
+            A file sharing web application built with Next.js and TypeScript using the App
+            Router. Users can upload files and share them with others through a link.
           </p>
-          <p><strong>Technologies:</strong> Next.js, TypeScript</p>
-          <p>
-            <a href="https://github.com/Rajankfl/next-file-sharing"
-              >View the File Sharing App repository on GitHub</a
-            >
-          </p>
+          <ul class="tags" aria-label="Technologies used">
+            <li>Next.js</li>
+            <li>TypeScript</li>
+          </ul>
+          <p><a class="button" href="https://github.com/Rajankfl/next-file-sharing">View repository</a></p>
         </article>
-      </section>
 
-      <section id="contact" aria-labelledby="contact-heading">
-        <h2 id="contact-heading">Contact Me</h2>
-        <p>
-          Have a question or an opportunity? Send me a message using the form
-          below.
+      </div>
+    </section>
+
+    <!-- ===== Contact form ===== -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact Me</h2>
+      <p>Have a question or an opportunity? Send me a message using the form below.</p>
+      <form class="contact-form" action="#" method="post">
+        <p class="form-field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
         </p>
-        <form action="#" method="post">
-          <p>
-            <label for="name">Name</label><br />
-            <input
-              type="text"
-              id="name"
-              name="name"
-              autocomplete="name"
-              required
-            />
-          </p>
-          <p>
-            <label for="email">Email</label><br />
-            <input
-              type="email"
-              id="email"
-              name="email"
-              autocomplete="email"
-              required
-            />
-          </p>
-          <p>
-            <label for="message">Message</label><br />
-            <textarea
-              id="message"
-              name="message"
-              rows="6"
-              cols="40"
-              required
-            ></textarea>
-          </p>
-          <p>
-            <button type="submit">Send Message</button>
-          </p>
-        </form>
-      </section>
-    </main>
-    <footer>
-      <p>&copy; 2026 Rajan Kafle. All rights reserved.</p>
-      <p><a href="#top">Back to top</a></p>
-    </footer>
-  </body>
+        <p class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </p>
+        <p class="form-field form-field-full">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </p>
+        <p class="form-field-full">
+          <button type="submit" class="button">Send Message</button>
+        </p>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Rajan Kafle. All rights reserved.</p>
+    <p><a href="#top">Back to top</a></p>
+  </footer>
+
+</body>
 </html>
